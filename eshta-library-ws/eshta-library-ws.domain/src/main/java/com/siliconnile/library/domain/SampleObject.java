@@ -10,6 +10,7 @@ import javax.persistence.Table;
  * User: Andrew
  * Date: 6/18/13
  */
+@SuppressWarnings("serial")
 @Entity
 @Table(name = "sample", schema = "public")
 public class SampleObject extends BasicObject {

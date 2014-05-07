@@ -8,6 +8,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * User: Andrew
  * Date: 6/27/13
  */
+@SuppressWarnings("serial")
 @XmlRootElement
 public class SampleObjectDTO extends BasicDTO {
     

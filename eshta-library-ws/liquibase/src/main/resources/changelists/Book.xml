@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+
+    <changeSet id="1" author="Nozahy">
+        <createTable tableName="book" schemaName="public">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(256)"/>
+            <column name="author" type="VARCHAR(256)"/>
+            <column name="cover_image_url" type="VARCHAR(256)"/>
+            <column name="isbn" type="VARCHAR(256)"/>
+            <column name="status" type="VARCHAR(256)"/>
+        </createTable>
+    </changeSet>
+    
+     <changeSet id="2" author="Nozahy">
+        <addPrimaryKey tableName="book" columnNames="id"/>
+    </changeSet>
+
+</databaseChangeLog>
