@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+
+    <changeSet id="3" author="Nozahy">
+        <createTable tableName="reader" schemaName="public">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false"/>
+            </column>
+            <column name="reader_name" type="VARCHAR(256)"/>
+            <column name="registration_date" type="TIMESTAMP"/>
+        </createTable>
+    </changeSet>
+    
+     <changeSet id="4" author="Nozahy">
+        <addPrimaryKey tableName="reader" columnNames="id"/>
+    </changeSet>
+
+</databaseChangeLog>

@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 import com.pearlox.framework.dao.impl.BasicJpaDao;
 import com.siliconnile.library.dao.BookDao;
 import com.siliconnile.library.domain.Book;
-import com.siliconnile.library.domain.SampleObject;
 
 @Repository
 public class BookDaoImp extends BasicJpaDao<Book> implements BookDao {
