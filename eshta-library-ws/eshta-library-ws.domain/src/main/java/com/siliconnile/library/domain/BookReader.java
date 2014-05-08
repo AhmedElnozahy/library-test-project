@@ -1,5 +1,6 @@
 package com.siliconnile.library.domain;
 
+import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -13,32 +14,35 @@ import com.pearlox.framework.domain.BasicObject;
 @Table(name = "book")
 public class BookReader extends BasicObject {
 	
-	private Book book;
-	private Reader reader;
+	private Collection<Book> book;
+	private Collection<Reader> reader;
 	private Date lendDate;
 	
 	@Column(name="lend_date")
 	public Date getLendDate() {
 		return lendDate;
 	}
-	
-	@Column(name="book_id")
-	public Book getBook() {
-		return book;
-	}
-	public void setBook(Book book) {
-		this.book = book;
-	}
-	
-	@Column(name="reader_Id")
-	public Reader getReader() {
-		return reader;
-	}
-	public void setReader(Reader reader) {
-		this.reader = reader;
-	}
+
 	public void setLendDate(Date lendDate) {
 		this.lendDate = lendDate;
+	}
+
+	@Column(name="book_id")
+	public Collection<Book> getBook() {
+		return book;
+	}
+
+	public void setBook(Collection<Book> book) {
+		this.book = book;
+	}
+
+	@Column(name="reader_Id")
+	public Collection<Reader> getReader() {
+		return reader;
+	}
+
+	public void setReader(Collection<Reader> reader) {
+		this.reader = reader;
 	}
 
 }
